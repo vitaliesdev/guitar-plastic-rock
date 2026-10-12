@@ -1,0 +1,3 @@
+# Runtime de C incrustado: el .exe no depende de VCRUNTIME140.dll (no viene con Windows de serie)
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

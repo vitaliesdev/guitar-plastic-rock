@@ -1,0 +1,9 @@
+[package]
+name = "gpr-i18n"
+description = "Textos de Guitar Plastic Rock en 9 idiomas"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]

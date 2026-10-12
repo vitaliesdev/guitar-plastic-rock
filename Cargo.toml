@@ -1,0 +1,38 @@
+# Guitar Plastic Rock: guitarras de Guitar Hero Live (dongle PS4) y PDP Riffmaster (PlayStation)
+# como mandos Xbox 360 en Windows. Arquitectura por capas: docs/ARCHITECTURE.md
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+default-members = ["crates/gpr-app"]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+gpr-core = { path = "crates/gpr-core" }
+gpr-i18n = { path = "crates/gpr-i18n" }
+gpr-platform = { path = "crates/gpr-platform" }
+gpr-backend = { path = "crates/gpr-backend" }
+gpr-frontend = { path = "crates/gpr-frontend" }
+
+eframe = { version = "0.36", features = ["wgpu", "glow"] } # Direct3D/Vulkan, con OpenGL de respaldo
+image = { version = "0.25", default-features = false, features = ["png"] }
+hidapi = { version = "2.6", default-features = false, features = ["windows-native"] }
+vigem-client = "0.1.4"
+tray-icon = "0.26"
+winreg = "0.56"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+raw-window-handle = "0.6"
+windows = "0.62"
+winresource = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

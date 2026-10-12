@@ -1,0 +1,20 @@
+[package]
+name = "gpr-app"
+description = "Guitar Plastic Rock: guitarras de Guitar Hero Live y PDP Riffmaster como mandos Xbox en Windows"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "GuitarPlasticRock"
+path = "src/main.rs"
+
+[dependencies]
+gpr-core.workspace = true
+gpr-platform.workspace = true
+gpr-backend.workspace = true
+gpr-frontend.workspace = true
+
+[build-dependencies]
+winresource.workspace = true

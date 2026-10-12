@@ -1,0 +1,20 @@
+[package]
+name = "gpr-backend"
+description = "Servicio de Guitar Plastic Rock: lectura HID de las guitarras, mandos Xbox virtuales y driver en segundo plano"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+gpr-core.workspace = true
+gpr-i18n.workspace = true
+gpr-platform.workspace = true
+hidapi.workspace = true
+image.workspace = true
+tray-icon.workspace = true
+vigem-client.workspace = true
+
+[dependencies.windows]
+workspace = true
+features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"]

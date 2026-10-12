@@ -1,0 +1,10 @@
+[package]
+name = "gpr-core"
+description = "Dominio de Guitar Plastic Rock: guitarras, protocolos HID y mando Xbox (sin Windows ni E/S)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+serde.workspace = true

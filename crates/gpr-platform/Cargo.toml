@@ -1,0 +1,29 @@
+[package]
+name = "gpr-platform"
+description = "Integración con Windows: rutas, registro, instancia única, inicio automático, ViGEmBus y XInput"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+gpr-core.workspace = true
+gpr-i18n.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+vigem-client.workspace = true
+winreg.workspace = true
+
+[dependencies.windows]
+workspace = true
+features = [
+    "Win32_Foundation",
+    "Win32_Globalization",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_System_SystemInformation",
+    "Win32_System_Registry",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_XboxController",
+]
